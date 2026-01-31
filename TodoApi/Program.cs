@@ -8,9 +8,9 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-builder.Services.AddDbContext<TodoContext>(opt =>
-    opt.UseInMemoryDatabase("TodoList"));
+builder.Services.AddDbContext<TodoContext>(option => option.UseInMemoryDatabase("TodoItems"));
 
+// builder.Services.AddDbContext<UserContext>(option => option.UseInMemoryDatabase("UserContext"));
 
 var app = builder.Build();
 
